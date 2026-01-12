@@ -13,27 +13,43 @@
 <body class="bg-slate-900 md:bg-gradient-to-tr from-slate-900 from-20% to-slate-800 text-white">
 
     <!-- Nav Bar -->
-    <header class="px-3 md:px-12 h-12 flex bg-slate-800 bg-opacity-70 fixed top-0 z-10 backdrop-blur-md w-full shadow-md">
+    <header class="px-3 md:px-12 h-12 flex justify-between items-center bg-slate-800 bg-opacity-70 fixed top-0 z-10 backdrop-blur-md w-full shadow-md">
         
-        <div class="w-1/3 md:w-3/5 text-lg md:text-2xl font-my-name  flex items-center">
-        <a href="#home-section" class="text-sky-400">Vipin
-            <span class="text-sky-500">Yadav</span>
-        </a>
+        <div class="text-lg md:text-2xl font-my-name flex items-center">
+            <a href="#home-section" class="text-sky-400">Vipin
+                <span class="text-sky-500">Yadav</span>
+            </a>
         </div>
 
-        <div class="w-2/3 md:w-2/5 flex justify-between items-center font-normal text-sm md:text-lg">
+        <!-- Desktop Navigation Menu -->
+        <div class="hidden md:flex justify-between items-center font-normal text-lg" style="gap: 2.5rem;">
             <a href="#home-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Home</a>
-            <!-- <a href="#about" class="hover:text-sky-400 hover:border-b-2 border-sky-500">About</a> -->
-            <a href="#education-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Education</a>
+            <a href="#about-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">About</a>
+            <a href="#career-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Experience</a>
+            <!-- <a href="#education-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Education</a> -->
             <a href="#skills-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Skills</a>
             <a href="#projects-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Projects</a>
             <a href="#contact-section" class="hover:text-sky-400 hover:border-b-2 border-sky-500">Contact</a>
         </div>
     
-        <button >
-            <i class="fa-solid fa-bars hidden" onclick="handleMenu()"></i>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="md:hidden" id="mobile-menu-btn" style="display: none;">
+            <i class="fa-solid fa-bars text-xl cursor-pointer" onclick="handleMenu()"></i>
         </button>
     </header>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile-menu" class="hidden fixed right-0 bg-slate-900 bg-opacity-98 backdrop-blur-md shadow-xl w-56 rounded-3xl" style="right: 0; left: auto; top: 48px; padding-bottom: 12px; display: none; z-index: 9999; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);">
+        <div class="flex flex-col items-start gap-4 py-4 px-6">
+            <a href="#home-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">Home</a>
+            <a href="#about-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">About</a>
+            <a href="#career-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">Experience</a>
+            <!-- <a href="#education-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">Education</a> -->
+            <a href="#skills-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">Skills</a>
+            <a href="#projects-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">Projects</a>
+            <a href="#contact-section" class="text-white hover:text-sky-400 font-normal text-lg py-2 w-full hover:border-b-2 border-sky-500 block" onclick="handleMenu()">Contact</a>
+        </div>
+    </nav>
 
     <main class="mx-12">
 
@@ -87,8 +103,59 @@
             </div>
         </section>
 
+        <!-- About Me Section -->
+        <div id="about-section" class="h-12 mt-4"></div>     <!-- Nav section target here-->
+        <section class="md:mx-12 mb-20">
+            <div class="h-12 my-20 md:my-0 md:mb-28 border-b-2 border-gray-600">
+                <h1 class="font-semibold text-center text-3xl text-gray-100">ABOUT ME</h1>
+            </div>
+
+            <div class="text-gray-300 leading-relaxed">
+                <p class="mb-6 text-base md:text-lg">
+                    I'm a passionate software developer dedicated to building scalable, efficient solutions that solve real-world problems. With a strong foundation in computer science and hands-on experience in full-stack development, I'm driven by clean architecture, optimization, and creating intuitive user experiences.
+                </p>
+                
+                <p class="mb-6 text-base md:text-lg">
+                    I'm a B.Tech graduate from KIIT, Bhubaneswar, and I've picked up solid skills in Java, Spring Boot, and API development through projects and real work. I genuinely enjoy learning new tech and building things that matter. Outside of coding, I love swimming and travelling – they help me clear my head and get fresh perspectives. And yes, I'm that person solving LeetCode problems for fun!
+                </p>
+
+                <p class="text-base md:text-lg">
+                    Let's connect! I'm open to collaborating on exciting projects or discussing all things technology.
+                </p>
+            </div>
+        </section>
+
+        <!-- Career Section  -->
+        <div id="career-section" class="h-12 mt-4"></div>     <!-- Nav section target here-->
+        <section class="md:mx-12 mb-20">
+            <div class="h-12 my-20 md:my-0 md:mb-28 border-b-2 border-gray-600">
+                <h1 class="font-semibold text-center text-3xl text-gray-100">EXPERIENCE</h1>
+            </div>
+
+            <div>
+                <ol class="relative border-s border-gray-700">                
+                    <li class="mb-14 ms-4">
+                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-500">Sept 2025 - Present</time>
+                        <h3 class="text-lg font-semibold text-white">Software Engineer Apprentice</h3>
+                        <p class="mb-2 text-base font-normal text-gray-400">Fidelity Investments</p>
+                        <p class="text-base font-normal text-gray-400">Working on API development using Java, contributing to backend services and RESTful APIs.</p>
+                         <p class="text-base font-normal text-gray-400">Collaborated with cross-functional teams to understand requirements, debug issues, and deliver features in an agile environment.</p>
+
+                    <li class="mb-14 ms-4">
+                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-500">Jan 2025 - Apr 2025</time>
+                        <h3 class="text-lg font-semibold text-white">Java Backend Development Trainee</h3>
+                        <p class="mb-2 text-base font-normal text-gray-400">Revature</p>
+                        <p class="text-base font-normal text-gray-400">Trained in Java, SQL, and Spring Boot REST APIs with hands-on coding and project work.</p>
+                        <p class="text-base font-normal text-gray-400">Delivered projects including a JDBC-based application for database operations and a Spring Boot REST API with data persistence and validation.</p>
+                </ol>
+            </div>
+        </section>
+
         <!-- Eduction Section  -->
-        <div id="education-section" class="h-12 mt-4"></div>     <!-- Nav section target here-->
+        <!-- 
+        <div id="education-section" class="h-12 mt-4"></div>
         <section class="md:mx-12 mb-20">
             <div class="h-12 my-20 md:my-0 md:mb-28 border-b-2 border-gray-600">
                 <h1 class="font-semibold text-center text-3xl text-gray-100">EDUCATION</h1>
@@ -119,6 +186,7 @@
                 </ol>
             </div>
         </section>
+        -->
 
         <!-- Skills Section  -->
         <div id="skills-section" class="h-12"></div>     <!-- Nav section target here-->

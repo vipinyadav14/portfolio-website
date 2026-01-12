@@ -1435,3 +1435,34 @@ video {
     padding-right: 1.5rem;
   }
 }
+
+/* Mobile Menu Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+#mobile-menu.hidden {
+  animation: slideOutRight 0.3s ease-in-out forwards;
+}
+
+#mobile-menu:not(.hidden) {
+  animation: slideInRight 0.3s ease-in-out forwards;
+}
